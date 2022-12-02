@@ -6,7 +6,11 @@ This helper integrates [CodeceptJS](https://codecept.io/) and [Snowplow](https:/
 
 ## Installation
 
-// TBD
+```
+npm install https://github.com/Viasat/codecept-snowplow-helper.git --save-dev
+```
+
+We are working to create a proper NPM package!
 
 ## Configuration
 
