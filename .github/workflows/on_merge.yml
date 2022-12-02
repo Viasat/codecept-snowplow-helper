@@ -1,0 +1,34 @@
+name: Release workflow
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  release:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Node setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: current
+
+      - name: Test
+        id: unit-tests
+        run: |
+          npm ci
+          npm run test
+
+      - name: Release
+        if: steps.unit-tests.outcome == 'success'
+        run: |
+          npx semantic-release

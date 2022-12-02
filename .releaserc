@@ -1,0 +1,6 @@
+{ 
+    branches: [
+        { name: "main" },
+    ], 
+    ci: true 
+}
