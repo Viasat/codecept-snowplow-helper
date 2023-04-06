@@ -1,6 +1,13 @@
 { 
-    branches: [
-        { name: "main" },
-    ], 
-    ci: true 
+    "branches": [
+        "master",
+        "main"
+    ],
+    "ci": true,
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        "@semantic-release/npm",
+        "@semantic-release/git",
+        "@semantic-release/github"
+    ]
 }
