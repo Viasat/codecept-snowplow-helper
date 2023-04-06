@@ -2,17 +2,14 @@
 
 This helper integrates [CodeceptJS](https://codecept.io/) and [Snowplow](https://snowplow.io). It includes steps to check correctness of your [Snowplow](https://snowplow.io) events, tested against a [Snowplow-micro](https://docs.snowplow.io/docs/understanding-your-pipeline/what-is-snowplow-micro/) instance running in the background.
 
-**The Snowplow micro instance is not included**
 
 ## Installation
 
 ```
-npm install https://github.com/Viasat/codecept-snowplow-helper.git --save-dev
+npm install --save-dev @viasat/codeceptjs-snowplow-helper
 ```
 
-We are working to create a proper NPM package!
-
-## Configuration
+## How to use it
 
 On the `helpers` section of your [CodeceptJS](https://codecept.io/) file, indicate:
 
