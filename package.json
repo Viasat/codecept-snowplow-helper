@@ -4,8 +4,10 @@
   "description": "A CodeceptJS helper to integrate Snowplow micro analytics in the acceptance tests",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "postinstall": "husky install",
+    "lint": "eslint src/**",
+    "test": "jest --coverage --config=jest.config.js src",
+    "test:watch": "jest --watchAll --config=jest.config.js src"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,9 @@
   },
   "devDependencies": {
     "@semantic-release/git": "^10.0.1",
+    "eslint": "^8.37.0",
+    "eslint-plugin-jest": "^27.2.1",
+    "husky": "^8.0.3",
     "jest": "^29.3.1"
   }
 }

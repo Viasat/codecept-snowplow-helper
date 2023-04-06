@@ -21,3 +21,6 @@ jobs:
 
       - name: Run unit tests
         run: npm run test
+
+      - name: Check code style
+        run: npm run lint
