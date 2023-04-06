@@ -1,6 +1,6 @@
 {
   "name": "@viasat/codeceptjs-snowplow-helper",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A CodeceptJS helper to integrate Snowplow micro analytics in the acceptance tests",
   "main": "index.js",
   "scripts": {
