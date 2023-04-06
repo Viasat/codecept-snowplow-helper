@@ -1,6 +1,6 @@
 {
   "name": "codeceptjs-snowplow-helper",
-  "version": "0.0.1",
+  "version": "1.1.0",
   "description": "A CodeceptJS helper to integrate Snowplow micro analytics in the acceptance tests",
   "main": "index.js",
   "scripts": {
