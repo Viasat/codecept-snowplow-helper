@@ -1,9 +1,9 @@
-name: Unit tests
+name: Running quality checks
 
-on: pull_request
+on: [pull_request, workflow_call]
 
 jobs:
-  unit-tests:
+  validation:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -14,11 +14,10 @@ jobs:
       - name: Node setup
         uses: actions/setup-node@v3
         with:
-          node-version: current
+          node-version: latest
 
-      - name: App setup
-        run: npm install
+      - name: Install dependencies
+        run: npm ci
 
       - name: Run unit tests
-        run: |
-          npm run test
+        run: npm run test
